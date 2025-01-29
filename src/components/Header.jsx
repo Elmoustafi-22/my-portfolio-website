@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <header className='container p-4'>
+    <header className='container p-6'>
         <div className='flex justify-between items-center m-2'>
             <div>
-                <p className='text-lg font-semibold text-sky-600'>Mustopha.</p>
+                <p className='text-xl font-semibold text-sky-500'>Mustopha.</p>
             </div>
             <nav className='flex gap-4'>
                 <ul className='flex gap-4'>
