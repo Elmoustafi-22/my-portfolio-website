@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <main className='container pt-12 max-w-xl'>
+    <section className='container pt-12 max-w-xl'>
         <div className='flex flex-col gap-8'>
             <h1 className='text-center text-4xl font-bold text-gray-700'>
                 Hi, I am <span className='text-sky-600'>Mustopha.</span>
@@ -25,6 +25,6 @@ export default function Hero() {
                 </a>
             </div>
         </div>
-    </main>
+    </section>
   )
 }
