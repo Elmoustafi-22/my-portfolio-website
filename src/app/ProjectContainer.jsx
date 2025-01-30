@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ProjectContainer() {
   return (
-    <div className='bg-white w-[280px] max-h-[300px] p-5 shadow-2xl mt-4 hover:-translate-y-1 transition duration-300'>
+    <div className='bg-white w-[280px] max-h-[300px] p-5 shadow-lg mt-4 hover:-translate-y-1 transition duration-300'>
         <h3 className='text-center font-extrabold text-gray-600 text-xl'>Project</h3>
         <div className='flex flex-col gap-6 mt-4'>
             <p className='text-center text-xs text-gray-600'>Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam</p>
