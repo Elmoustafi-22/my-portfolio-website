@@ -7,7 +7,7 @@ import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
-    <div className="bg-slate-100 h-full">
+    <div className="dark:bg-darkBgDeep bg-slate-100 h-full">
     
       <Header />
       <main className="flex flex-col gap-20">

@@ -1,14 +1,29 @@
+'use client'
 
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
     <section className='container pt-12 max-w-xl'>
-        <div className='flex flex-col gap-8'>
-            <h1 className='text-center text-4xl font-bold text-gray-700'>
-                Hi, I am <span className='text-sky-600'>Mustopha.</span>
-            </h1>
-            <h2 className='text-center text-2xl font-bold text-gray-600'>A Front End Engineer.</h2>
+        <div className='flex flex-col gap-8 text-center'>
+            <motion.h1 
+                className='text-center text-4xl font-bold text-gray-700 dark:text-darkText'
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+
+            >
+                Hi, I am <span className='text-sky-600 dark:text-darkTextDeep'>Mustopha.</span>
+            </motion.h1>
+            <motion.h2 
+                className='text-center text-2xl font-bold text-gray-600 dark:text-darkText'
+                initial={{ opacity: 0, x : -10 }}
+                animate={{ opacity: 1, x : 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+            >
+                A Front End Engineer.
+            </motion.h2>
             <p className='max-w-[560px] mx-auto text-xs text-gray-600'>
                 Front-end developer skilled in React, Next.js, and Tailwind CSS. Passionate about building responsive, user-friendly interfaces. Experienced in UI/UX design, component-based architecture, and performance optimization for modern web applications.
             </p>
