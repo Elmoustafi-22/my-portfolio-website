@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { DarkModeProvider } from "@/context/DarkModeContext";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
@@ -7,7 +8,7 @@ const poppins = Poppins({
 })
 
 export const metadata = {
-  title: "My Portfolio",
+  title: "Mustopha's portfolio",
   description: "My portfolio",
 };
 
@@ -17,7 +18,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.className}`}
       >
-        {children}
+        <DarkModeProvider>
+          {children}
+        </DarkModeProvider>
       </body>
     </html>
   );
