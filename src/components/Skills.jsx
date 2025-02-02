@@ -1,23 +1,44 @@
+'use client'
 import React from 'react'
+import { motion } from 'framer-motion'
+import { skills } from '@/data/skills'
+
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 }
+  }
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }  // Fixed incorrect y animation
+}
 
 export default function Skills() {
   return (
-    <section className='mt-4 container max-w-[400px]'>
-      <h3 className='font-extrabold text-2xl text-gray-700 text-center uppercase'>Skills</h3>
-      <ul className='text-xs text-gray-700 flex flex-wrap gap-3 justify-center items-center mt-6'>
-            <li className='cursor-pointer hover:-translate-y-1 transition duration-300  text-center uppercase py-2 px-4 bg-white shadow-md'>html</li>
-            <li className='cursor-pointer hover:-translate-y-1 transition duration-300  text-center uppercase py-2 px-4 bg-white shadow-md'>css</li>
-            <li className='cursor-pointer hover:-translate-y-1 transition duration-300  text-center py-2 px-4 bg-white shadow-md'>JavaScript</li>
-            <li className='cursor-pointer hover:-translate-y-1 transition duration-300  text-center py-2 px-4 bg-white shadow-md'>TypeScript</li>
-            <li className='cursor-pointer hover:-translate-y-1 transition duration-300  text-center py-2 px-4 bg-white shadow-md'>React</li>
-            <li className='cursor-pointer hover:-translate-y-1 transition duration-300  text-center py-2 px-4 bg-white shadow-md'>Redux</li>
-            <li className='cursor-pointer hover:-translate-y-1 transition duration-300  text-center uppercase py-2 px-4 bg-white shadow-md'>sass</li>
-            <li className='cursor-pointer hover:-translate-y-1 transition duration-300  text-center py-2 px-4 bg-white shadow-md'>Material UI</li>
-            <li className='cursor-pointer hover:-translate-y-1 transition duration-300  text-center py-2 px-4 bg-white shadow-md'>Git</li>
-            <li className='cursor-pointer hover:-translate-y-1 transition duration-300  text-center uppercase py-2 px-4 bg-white shadow-md'>ci/cd</li>
-            <li className='cursor-pointer hover:-translate-y-1 transition duration-300  text-center py-2 px-4 bg-white shadow-md'>Jest</li>
-            <li className='cursor-pointer hover:-translate-y-1 transition duration-300  text-center py-2 px-4 bg-white shadow-md'>Enzyme</li>
-      </ul>
+    <section className='mt-8 container max-w-lg mx-auto'>
+      <h3 className='font-extrabold text-3xl text-gray-700 text-center uppercase dark:text-darkTextDeep'>Skills</h3>
+      <motion.ul 
+        className='text-gray-700 flex flex-wrap gap-4 justify-center items-center mt-6'
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {skills.map(({ name, icon }) => (
+          <motion.li
+            key={name}
+            whileHover={{ scale: 1.05 }}
+            variants={itemVariants}
+            className='dark:text-darkTextDeep flex flex-col items-center gap-1 text-xs cursor-pointer text-center uppercase transition-transform duration-300'
+          >
+            {icon}
+            {name}
+          </motion.li>
+        ))}
+      </motion.ul>
     </section>
   )
 }
