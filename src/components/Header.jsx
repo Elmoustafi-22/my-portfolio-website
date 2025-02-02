@@ -1,6 +1,7 @@
 'use client'
 import React, { useCallback, useContext } from 'react'
 import { DarkModeContext } from '@/context/DarkModeContext'
+import { motion } from 'framer-motion';
 
 export default function Header() {
     const {darkMode, setDarkMode} = useContext(DarkModeContext);
@@ -10,27 +11,44 @@ export default function Header() {
     }, [setDarkMode])
 
   return (
-    <header className='container mx-auto px-6 py-4'>
+    <motion.header 
+        className='container mx-auto px-6 py-4'
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
         <div className='flex justify-between items-center'>
             
-            <p className='dark:text-darkTextDeep dark:after:bg-darkTextDeep text-xl font-semibold text-sky-600 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-1 after:bg-sky-600 hover:after:w-full pb-1 after:transition-all after:duration-300 cursor-pointer '>Mustopha.</p>
+            <motion.p 
+                className='dark:text-darkTextDeep dark:after:bg-darkTextDeep text-xl font-semibold text-sky-600 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-1 after:bg-sky-600 hover:after:w-full pb-1 after:transition-all after:duration-300 cursor-pointer '
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration:0.3 }}
+            >
+                Mustopha.
+            </motion.p>
             
             <nav className='flex items-center gap-6'>
                 <ul className='flex gap-6 text-gray-600 dark:text-darkTextLight text-sm'>
                     {['projects', 'skills', 'contact'].map((item) => (
-                        <li key={item}>
+                        <motion.li 
+                            key={item}
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ duration: 0.3 }}
+                        >
                             <a
                                 href={`#${item}`}
                                 className='relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1.5px] after:bg-sky-600 dark:after:bg-darkTextDeep after:transition-all after:duration-300 hover:text-sky-600 hover:after:w-full pb-2 transition-all dark:hover:text-darkTextDeep'
                             >
                                 {item}
                             </a>
-                        </li>
+                        </motion.li>
                     ))}                    
                 </ul>
-                <button
+                <motion.button
                     onClick={toggleDarkMode}
                     className='p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition'
+                    whileTap={{ rotate: 360, scale: 1.1 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 >
                     {darkMode ?
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" className='dark:text-darkText hover:text-darkBg'>
@@ -41,11 +59,11 @@ export default function Header() {
                             <path fill="currentColor" d="M9.5 2c-1.82 0-3.53.5-5 1.35c2.99 1.73 5 4.95 5 8.65s-2.01 6.92-5 8.65c1.47.85 3.18 1.35 5 1.35c5.52 0 10-4.48 10-10S15.02 2 9.5 2"></path>
                         </svg>
                     }   
-            </button>
+            </motion.button>
             </nav>
                         
         </div>
         
-    </header>
+    </motion.header>
   )
 }
