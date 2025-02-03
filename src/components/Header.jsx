@@ -12,7 +12,7 @@ export default function Header() {
 
   return (
     <motion.header 
-        className='container mx-auto px-6 py-4'
+        className='sticky top-0 z-30 bg-slate-100 container mx-auto px-6 py-4'
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}

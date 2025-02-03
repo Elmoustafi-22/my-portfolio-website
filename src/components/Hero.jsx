@@ -12,11 +12,11 @@ export default function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? {opacity: 1, y: 0}: {opacity: 0, y: 30}}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className='container pt-12 max-w-xl'
+        className='container pt-12 mt-24 h-[90vh] mb-0'
     >
         <div className='flex flex-col gap-8 text-center'>
             <motion.h1 
-                className='text-center text-4xl font-bold text-gray-700 dark:text-darkText'
+                className='text-center text-6xl font-bold text-gray-700 dark:text-darkText'
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 }: {opacity: 0, x: -20}}
                 transition={{ duration: 0.5 }}
@@ -25,7 +25,7 @@ export default function Hero() {
                 Hi, I am <span className='text-sky-600 dark:text-darkTextDeep'>Mustopha.</span>
             </motion.h1>
             <motion.h2 
-                className='text-center text-2xl font-bold text-gray-600 dark:text-darkText'
+                className='text-center text-3xl font-bold text-gray-600 dark:text-darkText'
                 initial={{ opacity: 0, x : -10 }}
                 animate={isInView ? { opacity: 1, x : 0 }: { opacity: 0, x : -10 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -33,7 +33,7 @@ export default function Hero() {
                 A Front End Engineer.
             </motion.h2>
             <motion.p 
-                className='max-w-md mx-auto text-xs text-gray-600 dark:text-darkTextLight'
+                className='max-w-md mx-auto text-base text-gray-600 dark:text-darkTextLight'
                 initial={{ opacity: 0, x: 10 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 10 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
@@ -46,8 +46,8 @@ export default function Hero() {
                 animate={isInView ? { opacity: 1, scale: 1 }: { opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
             >
-                <a className='relative bg-white px-4 py-2 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg'>
-                    <span className='relative text-sm text-sky-600 dark:text-darkText z-10 group-hover:text-white dark:group-hover:text-darkBgDeep transition-colors duration-300'>resume</span>
+                <a className='relative bg-white px-6 py-4 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg'>
+                    <span className='relative text-base font-semibold text-sky-600 dark:text-darkText z-10 group-hover:text-white dark:group-hover:text-darkBgDeep transition-colors duration-300'>resume</span>
                     <div className='absolute inset-0 w-full bg-sky-600 dark:bg-darkTextDeep -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in'></div>
                 </a>
                 {
@@ -63,7 +63,7 @@ export default function Hero() {
                             className='cursor-pointer relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-sky-600 dark:after:bg-darkTextDeep hover:after:w-full pb-2 transition-all after:duration-300 group'
                             aria-label={icon}
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"  className='text-gray-600 dark:text-darkText size-5 hover:text-sky-600 dark:group-hover:text-darkTextDeep duration-300 transition'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"  className='text-gray-600 dark:text-darkText size-8 hover:text-sky-600 dark:group-hover:text-darkTextDeep duration-300 transition'>
                                 
                                  {icon === 'github' ? (
                                         <path

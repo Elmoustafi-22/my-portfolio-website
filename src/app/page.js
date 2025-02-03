@@ -10,12 +10,10 @@ export default function Home() {
     <div className="dark:bg-darkBgDeep bg-slate-100 h-full">
     
       <Header />
-      <main className="flex flex-col gap-20">
         <Hero />
         <Projects />
         <Skills />
         <Contact />
-      </main>
       <Footer />
     </div>
   );
