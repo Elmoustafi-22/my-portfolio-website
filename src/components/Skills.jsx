@@ -2,6 +2,7 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { skills } from '@/data/skills'
+import { hankenGrotesk, poppins } from '@/styles/fonts'
 
 
 const containerVariants = {
@@ -23,7 +24,7 @@ export default function Skills() {
 
   return (
     <section ref={ref} id='skills' className='mt-40 container mx-auto'>
-      <h3 className='font-extrabold text-4xl text-gray-700 text-center uppercase dark:text-darkTextDeep'>Skills</h3>
+      <h3 className={`${poppins.className} font-extrabold text-4xl text-gray-700 text-center uppercase dark:text-darkTextDeep`}>Skills</h3>
       <motion.ul 
         className='text-gray-700 flex gap-6 max-w-lg flex-wrap mx-auto justify-center items-center mt-6'
         variants={containerVariants}
@@ -35,6 +36,7 @@ export default function Skills() {
             key={name}
             whileHover={{ scale: 1.05 }}
             variants={itemVariants}
+            className={`${hankenGrotesk.className}`}
           > 
           <a
             href={href}

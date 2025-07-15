@@ -1,4 +1,4 @@
-import { Poppins } from "next/font/google";
+import { Poppins, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import { DarkModeProvider } from "@/context/DarkModeContext";
 
@@ -6,6 +6,7 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"]
 })
+
 
 export const metadata = {
   title: "Mustopha's portfolio",
