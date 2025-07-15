@@ -17,7 +17,11 @@ export default function Hero() {
     >
       <div className="flex flex-col gap-8 text-center">
         <motion.h1
+
           className={`text-center text-6xl font-bold text-gray-700 dark:text-darkText ${poppins.className}`}
+
+          className="text-center text-6xl font-bold text-gray-700 dark:text-darkText"
+
           initial={{ opacity: 0, x: -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
           transition={{ duration: 0.5 }}
@@ -31,10 +35,17 @@ export default function Hero() {
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
+
           A Software Engineer.
         </motion.h2>
         <motion.p
           className={`max-w-md mx-auto text-base text-gray-600 dark:text-darkTextLight ${hankenGrotesk.className}`}
+
+          A Front End Engineer.
+        </motion.h2>
+        <motion.p
+          className="max-w-md mx-auto text-base text-gray-600 dark:text-darkTextLight"
+
           initial={{ opacity: 0, x: 10 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 10 }}
           transition={{ duration: 0.7, delay: 0.4 }}
@@ -54,7 +65,11 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <a
+
             className={`relative bg-white px-6 py-4 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg ${hankenGrotesk.className}`}
+
+            className="relative bg-white px-6 py-4 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg"
+
             href="https://drive.google.com/file/d/1lnMFdUEWfgeI6Uvl0FP7VWGQFqrjy_iz/view?usp=drive_link"
             target="_blank"
           >
