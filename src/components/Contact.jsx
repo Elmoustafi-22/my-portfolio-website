@@ -1,6 +1,7 @@
 'use client'
 import React, {useRef} from 'react'
 import { motion, useInView } from 'framer-motion'
+import { hankenGrotesk } from '@/styles/fonts'
 
 export default function Contact() {
   const ref = useRef(null)
@@ -19,7 +20,7 @@ export default function Contact() {
       <div className='flex items-center justify-center'>
         <motion.a 
           href={"mailto:abdulqadirmustopha@gmail.com"}
-          className='relative mt-4 bg-white px-4 py-2 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg'
+          className={`${hankenGrotesk.className} relative mt-4 bg-white px-4 py-2 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg`}
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.2 }}
         >

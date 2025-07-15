@@ -2,6 +2,7 @@
 import React, { useCallback, useContext } from 'react'
 import { DarkModeContext } from '@/context/DarkModeContext'
 import { motion } from 'framer-motion';
+import { hankenGrotesk } from '@/styles/fonts';
 
 export default function Header() {
     const {darkMode, setDarkMode} = useContext(DarkModeContext);
@@ -12,7 +13,7 @@ export default function Header() {
 
   return (
     <motion.header 
-        className='sticky top-0 z-30 bg-slate-100 container mx-auto px-6 py-4'
+        className={`sticky top-0 z-30 bg-slate-100 container mx-auto px-6 py-4 ${hankenGrotesk.className}`}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -20,11 +21,11 @@ export default function Header() {
         <div className='flex justify-between items-center'>
             
             <motion.p 
-                className='dark:text-darkTextDeep dark:after:bg-darkTextDeep text-xl font-semibold text-sky-600 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-1 after:bg-sky-600 hover:after:w-full pb-1 after:transition-all after:duration-300 cursor-pointer '
+                className='dark:text-darkTextDeep dark:after:bg-darkTextDeep text-2xl font-semibold text-sky-600 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-1 after:bg-sky-600 hover:after:w-full pb-1 after:transition-all after:duration-300 cursor-pointer '
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration:0.3 }}
             >
-                Mustopha.
+                <span className='text-4xl'>M</span>ustopha
             </motion.p>
             
             <nav className='flex items-center gap-6'>

@@ -3,6 +3,7 @@ import ProjectContainer from '@/app/ProjectContainer'
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { projects } from '@/data/projects'
+import { poppins, hankenGrotesk } from '@/styles/fonts'
 
 export default function Projects() {
   const ref = useRef(null);
@@ -12,7 +13,7 @@ export default function Projects() {
     <motion.section
       id='projects'
       ref={ref}
-      className='container mt-0'
+      className={`container mt-0 ${poppins.className}`}
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}

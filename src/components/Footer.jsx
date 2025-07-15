@@ -1,6 +1,7 @@
 'use client';
 import React, {useRef} from 'react'
 import { motion, useInView } from 'framer-motion';
+import { hankenGrotesk } from '@/styles/fonts';
 
 export default function Footer() {
   const ref = useRef(null)
@@ -18,7 +19,7 @@ export default function Footer() {
       animate={isInView ? {opacity: 1, y: 0} :  {opacity: 0, y: 30}}
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
-      <p className='text-sm font-bold text-sky-700 text-center dark:text-darkTextDeep'>created by mustopha</p>
+      <p className={`${hankenGrotesk.className}text-sm font-bold text-sky-700 text-center dark:text-darkTextDeep`}>created by mustopha</p>
       <motion.button 
         className='absolute right-6'
         onClick={scrollToTop}
