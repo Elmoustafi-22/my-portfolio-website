@@ -46,7 +46,7 @@ export default function Hero() {
                 animate={isInView ? { opacity: 1, scale: 1 }: { opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
             >
-                <a className='relative bg-white px-6 py-4 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg'>
+                <a className='relative bg-white px-6 py-4 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg' href='https://drive.google.com/file/d/1lnMFdUEWfgeI6Uvl0FP7VWGQFqrjy_iz/view?usp=drive_link' target='_blank'>
                     <span className='relative text-base font-semibold text-sky-600 dark:text-darkText z-10 group-hover:text-white dark:group-hover:text-darkBgDeep transition-colors duration-300'>resume</span>
                     <div className='absolute inset-0 w-full bg-sky-600 dark:bg-darkTextDeep -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in'></div>
                 </a>
