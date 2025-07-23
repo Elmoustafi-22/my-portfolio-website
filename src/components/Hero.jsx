@@ -55,7 +55,7 @@ export default function Hero() {
         >
           <a
             className={`relative bg-white px-6 py-4 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg ${hankenGrotesk.className}`}
-            href="https://drive.google.com/file/d/1lnMFdUEWfgeI6Uvl0FP7VWGQFqrjy_iz/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1x73anoAGaXksJWvRhQW3qamwk7XnIWvN/view?usp=sharing"
             target="_blank"
           >
             <span className="relative text-base font-semibold text-sky-600 dark:text-darkText z-10 group-hover:text-white dark:group-hover:text-darkBgDeep transition-colors duration-300">
