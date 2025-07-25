@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { hankenGrotesk, poppins } from "@/styles/fonts";
+import { ImGithub } from 'react-icons/im'
 
 export default function Hero() {
   const ref = useRef(null);
@@ -17,7 +18,7 @@ export default function Hero() {
     >
       <div className="flex flex-col gap-8 text-center">
         <motion.h1
-          className={`text-center text-6xl font-bold text-gray-700 dark:text-darkText ${poppins.className}`}
+          className={`text-center text-7xl font-bold text-gray-700 dark:text-darkText ${poppins.className}`}
           initial={{ opacity: 0, x: -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
           transition={{ duration: 0.5 }}
@@ -26,7 +27,7 @@ export default function Hero() {
           <span className="text-sky-600 dark:text-darkTextDeep">Mustopha.</span>
         </motion.h1>
         <motion.h2
-          className="text-center text-3xl font-bold text-gray-600 dark:text-darkText"
+          className="text-center text-4xl font-bold text-gray-600 dark:text-darkText"
           initial={{ opacity: 0, x: -10 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -34,7 +35,7 @@ export default function Hero() {
           A Software Engineer.
         </motion.h2>
         <motion.p
-          className={`max-w-md mx-auto text-base text-gray-600 dark:text-darkTextLight ${hankenGrotesk.className}`}
+          className={`max-w-2xl mx-auto text-[24pz] text-gray-600 dark:text-darkTextLight ${hankenGrotesk.className}`}
           initial={{ opacity: 0, x: 10 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 10 }}
           transition={{ duration: 0.7, delay: 0.4 }}
@@ -54,11 +55,11 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <a
-            className={`relative bg-white px-6 py-4 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg ${hankenGrotesk.className}`}
+            className={`relative bg-white px-8 py-5 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg ${hankenGrotesk.className}`}
             href="https://drive.google.com/file/d/1x73anoAGaXksJWvRhQW3qamwk7XnIWvN/view?usp=sharing"
             target="_blank"
           >
-            <span className="relative text-base font-semibold text-sky-600 dark:text-darkText z-10 group-hover:text-white dark:group-hover:text-darkBgDeep transition-colors duration-300">
+            <span className="relative text-[18px] font-semibold text-sky-600 dark:text-darkText z-10 group-hover:text-white dark:group-hover:text-darkBgDeep transition-colors duration-300">
               resume
             </span>
             <div className="absolute inset-0 w-full bg-sky-600 dark:bg-darkTextDeep -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in"></div>

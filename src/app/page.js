@@ -7,7 +7,7 @@ import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
-    <div className="dark:bg-darkBgDeep bg-slate-100 h-full">
+    <main className="dark:bg-darkBgDeep bg-slate-100 h-full">
     
       <Header />
         <Hero />
@@ -15,6 +15,6 @@ export default function Home() {
         <Skills />
         <Contact />
       <Footer />
-    </div>
+    </main>
   );
 }
