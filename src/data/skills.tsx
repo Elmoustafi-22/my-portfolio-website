@@ -1,4 +1,10 @@
-export const skills = [
+import React from 'react';
+
+export const skills: {
+  name: string;
+  icon: JSX.Element;
+  href: string;
+}[] = [
   {
     name: "JavaScript",
     icon: (

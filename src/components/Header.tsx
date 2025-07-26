@@ -28,7 +28,7 @@ export default function Header() {
         </motion.p>
 
         <nav className="flex items-center gap-6">
-          <ul className="flex gap-6 text-gray-600 dark:text-darkTextDeep text-[18px]">
+          <motion.ul className="flex gap-6 text-gray-600 dark:text-darkTextDeep text-[18px]">
             {["projects", "skills", "contact"].map((item) => (
               <motion.li
                 key={item}
@@ -43,7 +43,7 @@ export default function Header() {
                 </a>
               </motion.li>
             ))}
-          </ul>
+          </motion.ul>
           <motion.button
             onClick={toggleDarkMode}
             className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition"
