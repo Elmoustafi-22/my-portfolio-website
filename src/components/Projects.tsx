@@ -3,12 +3,11 @@ import ProjectContainer from "@/app/ProjectContainer";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { projects } from "@/data/projects";
-import { poppins, hankenGrotesk } from "@/styles/fonts";
-import Link from "next/link";
+import { poppins, } from "@/styles/fonts";
 
 export default function Projects() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { triggerOnce: false, threshold: 0.5 });
+  const isInView = useInView(ref, { once: false, amount: 0.02 });
 
   return (
     <motion.section
@@ -20,7 +19,7 @@ export default function Projects() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <motion.h2
-        className="text-gray-700 dark:text-darkTextDeep text-center text-3xl font-bold uppercase"
+        className="text-gray-700 dark:text-darkTextDeep text-center text-5xl  font-bold uppercase"
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         transition={{ duration: 0.5, ease: "easeOut" }}

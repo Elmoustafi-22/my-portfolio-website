@@ -5,7 +5,8 @@ import { hankenGrotesk } from '@/styles/fonts';
 
 export default function Footer() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { triggerOnce: false, threshold: 0.2 })
+  const isInView = useInView(ref, { once: false, amount: 0.02 });
+  
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })

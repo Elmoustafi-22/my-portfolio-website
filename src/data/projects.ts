@@ -2,7 +2,6 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    slug: "peermoove",
     title: "peermoove",
     image: "/images/peermoove.png",
     description:
@@ -15,7 +14,6 @@ export const projects: Project[] = [
       "Implemented reusable UI components using React and Tailwind CSS, collaborated with the team on page structure",
   },
   {
-    slug: "niyistore",
     title: "Niyistores",
     image: "/images/niyistores.png",
     description:
@@ -28,7 +26,6 @@ export const projects: Project[] = [
       "Built product listings, shopping cart, and user interface with React and Tailwind. Integrated backend API and implemented responsive design across all pages.",
   },
   {
-    slug: "remote-job-finder",
     title: "Remote Job Finder",
     image: "/images/remote-job-finder.png",
     description:
@@ -41,7 +38,6 @@ export const projects: Project[] = [
       "Created a responsive UI for browsing and filtering jobs, integrated job API endpoints, and optimized the site for usability and performance.",
   },
   {
-    slug: "greenglow",
     title: "GreenGlow",
     image: "/images/greenglow.png",
     description:

@@ -1,8 +1,8 @@
-import React from 'react';
+import { ReactElement } from 'react';
 
 export const skills: {
   name: string;
-  icon: JSX.Element;
+  icon: ReactElement;
   href: string;
 }[] = [
   {

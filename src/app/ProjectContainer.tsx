@@ -22,7 +22,7 @@ export default function ProjectContainer({ project }: { project: Project }) {
           {project.title}
         </h3>
         <div className="flex flex-col gap-6 mt-4 p-2">
-          <Link href={`/projects/${project.slug}`}>
+          
             <p
               className={`${hankenGrotesk.className} text-left text-base text-gray-600 dark:text-darkTextLight`}
             >
@@ -34,8 +34,7 @@ export default function ProjectContainer({ project }: { project: Project }) {
               alt="website screenshot"
               className="mt-2 max-h-[280px] object-cover w-full transition-transform duration-300 ease-in-out group-hover:scale-105"
             />
-          </Link>
-
+          
           <div className="flex flex-col gap-3">
             <p
               className={`${hankenGrotesk.className} text-base text-gray-600 dark:text-darkTextLight`}

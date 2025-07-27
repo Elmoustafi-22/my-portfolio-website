@@ -5,15 +5,15 @@ import { hankenGrotesk } from '@/styles/fonts'
 
 export default function Contact() {
   const ref = useRef(null)
-  const isinView = useInView(ref, { triggerOnce: false, threshold:0.2 })
-
+    const isInView = useInView(ref, { once: false, amount: 0.02 });
+  
   return (
     <motion.section 
       ref={ref}
       id='contact'
       className='container mt-40'
       initial={{ opacity: 0, y: 50 }}
-      animate={isinView ? { opacity: 1, y: 0 }: {opacity: 0, y: 50}}
+      animate={isInView ? { opacity: 1, y: 0 }: {opacity: 0, y: 50}}
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       <p className='font-extrabold text-gray-700 uppercase text-4xl mt-10 dark:text-darkTextDeep text-center'>Contact</p>

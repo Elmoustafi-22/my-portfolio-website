@@ -2,11 +2,11 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { hankenGrotesk, poppins } from "@/styles/fonts";
-import { ImGithub } from 'react-icons/im'
 
 export default function Hero() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { triggerOnce: false, threshold: 0.2 });
+  const isInView = useInView(ref, { once: false, amount: 0.02 });
+  
 
   return (
     <motion.section
@@ -58,6 +58,7 @@ export default function Hero() {
             className={`relative bg-white px-8 py-5 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg ${hankenGrotesk.className}`}
             href="https://drive.google.com/file/d/1x73anoAGaXksJWvRhQW3qamwk7XnIWvN/view?usp=sharing"
             target="_blank"
+            rel="noopener"
           >
             <span className="relative text-[18px] font-semibold text-sky-600 dark:text-darkText z-10 group-hover:text-white dark:group-hover:text-darkBgDeep transition-colors duration-300">
               resume

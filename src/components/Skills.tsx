@@ -20,7 +20,8 @@ const itemVariants = {
 
 export default function Skills() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { triggerOnce: false, threshold: 0.3 })
+  const isInView = useInView(ref, { once: false, amount: 0.02 });
+  
 
   return (
     <section ref={ref} id='skills' className='mt-40 container mx-auto'>
