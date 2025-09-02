@@ -56,7 +56,7 @@ export default function Hero() {
         >
           <a
             className={`relative bg-white px-8 py-5 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg ${hankenGrotesk.className}`}
-            href="https://drive.google.com/file/d/1x73anoAGaXksJWvRhQW3qamwk7XnIWvN/view?usp=sharing"
+            href="https://drive.google.com/file/d/1_m2YQpUpusE_Bcoz-zHWfE28WuU3N7Ku/view?usp=sharing"
             target="_blank"
             rel="noopener"
           >

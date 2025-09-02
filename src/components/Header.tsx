@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <motion.header
-      className={`sticky top-0 z-30 dark:bg-darkBgDeep bg-slate-100 container mx-auto px-6 py-4 ${hankenGrotesk.className}`}
+      className={`sticky top-0 z-30 dark:bg-darkBgDeep bg-slate-100 container mx-auto px-6 py-4 shadow-gray-300 shadow-sm dark:shadow-gray-600 ${hankenGrotesk.className}`}
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
