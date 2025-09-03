@@ -20,12 +20,12 @@ const itemVariants = {
 
 export default function Skills() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.02 });
+  const isInView = useInView(ref, { once: false, amount: 0.1 });
   
 
   return (
     <section ref={ref} id='skills' className='mt-40 container mx-auto'>
-      <h3 className={`${poppins.className} font-extrabold text-4xl text-gray-700 text-center uppercase dark:text-darkTextDeep`}>Tech stacks</h3>
+      <h3 className={`${poppins.className} font-extrabold text-4xl text-gray-700 text-center uppercase dark:text-darkTextDeep`}>Stacks</h3>
       <motion.ul 
         className='text-gray-700 flex gap-6 max-w-lg flex-wrap mx-auto justify-center items-center mt-6'
         variants={containerVariants}

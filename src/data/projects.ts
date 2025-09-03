@@ -49,4 +49,16 @@ export const projects: Project[] = [
     contribution:
       "Designed and built a responsive landing page with plant-themed visuals, styled using Tailwind CSS, and optimized for mobile and desktop views.",
   },
+  {
+    title: "BTWAWI",
+    image: "/images/btwawi.png",
+    description:
+      "BTWAWI is a multi-page event-driven web application built with React, Tailwind CSS, Node.js, and MongoDB. It includes event booking, business nominations, donations, sponsorships, and dedicated Lagos and Abuja pages for regional events.",
+    technologies: ["React", "TailwindCss", "Node.js", "MongoDB"],
+    github: "https://github.com/Smartrove/btwawi-3.0", 
+    live: "https://www.btwawi.com/",
+    role: "Fullstack Developer (Team Project)",
+    contribution:
+      "Developed multiple frontend pages (booking, secure-a-booth, grant, business nomination, donation, sponsorship, contact, landing, Lagos, Abuja) using React and Tailwind CSS. Implemented backend form handling and integrations with Node.js and MongoDB, while optimizing SEO and performance across the platform.",
+  },
 ];

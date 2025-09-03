@@ -5,7 +5,7 @@ import { hankenGrotesk, poppins } from "@/styles/fonts";
 
 export default function Hero() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.02 });
+  const isInView = useInView(ref, { once: false, amount: 0.1 });
   
 
   return (
