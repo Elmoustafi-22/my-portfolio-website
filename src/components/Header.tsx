@@ -13,22 +13,22 @@ export default function Header() {
 
   return (
     <motion.header
-      className={`sticky top-0 z-30 dark:bg-darkBgDeep bg-slate-100 container mx-auto px-6 py-4 shadow-gray-300 shadow-sm dark:shadow-gray-600 ${hankenGrotesk.className}`}
+      className={`sticky top-0 z-30 dark:bg-darkBgDeep bg-slate-100 container mx-auto px-8 py-4 shadow-gray-300 shadow-sm dark:shadow-gray-600 ${hankenGrotesk.className}`}
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between gap-2 md:gap-3 items-center">
         <motion.p
-          className="dark:text-darkTextDeep dark:after:bg-darkBgDeep text-3xl font-semibold text-sky-600 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-1 after:bg-sky-600 hover:after:w-full pb-1 after:transition-all after:duration-300 cursor-pointer "
+          className="dark:text-darkTextDeep dark:after:bg-darkBgDeep text-2xl lg:text-3xl font-semibold text-sky-600 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-1 after:bg-sky-600 hover:after:w-full pb-1 after:transition-all after:duration-300 cursor-pointer "
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
         >
-          <span className="text-4xl">M</span>ustopha
+          <span className="text-3xl md:text-4xl">M</span>ustopha
         </motion.p>
 
-        <nav className="flex items-center gap-6">
-          <motion.ul className="flex gap-6 text-gray-600 dark:text-darkTextDeep text-[18px]">
+        <nav className="flex items-center gap-2 lg:gap-6">
+          <motion.ul className="flex gap-2 md:gap-6 text-gray-600 dark:text-darkTextDeep text-sm md:text-[18px]">
             {["projects", "skills", "contact"].map((item) => (
               <motion.li
                 key={item}
@@ -46,7 +46,7 @@ export default function Header() {
           </motion.ul>
           <motion.button
             onClick={toggleDarkMode}
-            className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+            className="p-2 rounded-md cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition"
             whileTap={{ rotate: 360, scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
             aria-label={darkMode ? "Activate light mode" : "Activate dark mode"}
@@ -57,7 +57,7 @@ export default function Header() {
                 width="1em"
                 height="1em"
                 viewBox="0 0 24 24"
-                className="dark:text-darkText hover:text-darkBg"
+                className="dark:text-darkText hover:text-darkBg w-3 md:w-5"
               >
                 <path
                   fill="currentColor"
@@ -70,6 +70,7 @@ export default function Header() {
                 width="1em"
                 height="1em"
                 viewBox="0 0 24 24"
+                className="w-3 md:w-5"
               >
                 <path
                   fill="currentColor"

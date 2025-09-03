@@ -13,13 +13,13 @@ export default function Projects() {
     <motion.section
       id="projects"
       ref={ref}
-      className={`container mt-0 ${poppins.className}`}
+      className={`container px-8 mt-0 ${poppins.className}`}
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <motion.h2
-        className="text-gray-700 dark:text-darkTextDeep text-center text-5xl  font-bold uppercase"
+        className="text-gray-700 dark:text-darkTextDeep text-center text-3xl md:text-5xl  font-bold uppercase"
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
         transition={{ duration: 0.5, ease: "easeOut" }}

@@ -14,11 +14,11 @@ export default function Hero() {
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="container pt-12 mt-24 h-[90vh] mb-0"
+      className="container px-8 pt-12 mt-12 md:mt-24 h-[90vh] mb-0"
     >
       <div className="flex flex-col gap-8 text-center">
         <motion.h1
-          className={`text-center text-7xl font-bold text-gray-700 dark:text-darkText ${poppins.className}`}
+          className={`text-center text-6xl md:text-7xl font-bold text-gray-700 dark:text-darkText ${poppins.className}`}
           initial={{ opacity: 0, x: -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
           transition={{ duration: 0.5 }}
@@ -27,7 +27,7 @@ export default function Hero() {
           <span className="text-sky-600 dark:text-darkTextDeep">Mustopha.</span>
         </motion.h1>
         <motion.h2
-          className="text-center text-4xl font-bold text-gray-600 dark:text-darkText"
+          className="text-center text-3xl md:text-4xl font-bold text-gray-600 dark:text-darkText"
           initial={{ opacity: 0, x: -10 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -40,11 +40,10 @@ export default function Hero() {
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 10 }}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          Web App Developer skilled in React, Next.js, TypeScript, and Tailwind
-          CSS. Passionate about building responsive and user-focused web
-          applications. Experienced with modern front-end practices such as
-          state management, API integration, and performance optimization using
-          the latest technologies like Next.js App Router and React Hooks.
+          Full-Stack Web Developer skilled in React, Next.js, TypeScript,
+          Node.js, and MongoDB. I build responsive, user-focused applications
+          with seamless frontend–backend integration, optimized performance, and
+          modern UI/UX design.
         </motion.p>
         <motion.div
           className=" flex items-center justify-center gap-6"
