@@ -14,16 +14,28 @@ export const projects: Project[] = [
       "Implemented reusable UI components using React and Tailwind CSS, collaborated with the team on page structure",
   },
   {
-    title: "Niyistores",
-    image: "/images/niyistores.png",
+    title: "BTWAWI",
+    image: "/images/btwawi.png",
     description:
-      "An e-commerce website built with React, Next.js, and Tailwind CSS, offering a seamless shopping experience with intuitive navigation and responsive design. 🛍️✨",
-    technologies: ["React", "Nextjs", "TailwindCss"],
-    github: "https://github.com/Elmoustafi-22/niyistores",
-    live: "https://niyistores.vercel.app/",
-    role: "Fullstack Developer (Solo Project)",
+      "BTWAWI is a multi-page event-driven web application built with React, Tailwind CSS, Node.js, and MongoDB. It includes event booking, business nominations, donations, sponsorships, and dedicated Lagos and Abuja pages for regional events.",
+    technologies: ["React", "TailwindCss", "Node.js", "MongoDB"],
+    github: "https://github.com/Smartrove/btwawi-3.0",
+    live: "https://www.btwawi.com/",
+    role: "Fullstack Developer (Team Project)",
     contribution:
-      "Built product listings, shopping cart, and user interface with React and Tailwind. Integrated backend API and implemented responsive design across all pages.",
+      "Developed multiple frontend pages (booking, secure-a-booth, grant, business nomination, donation, sponsorship, contact, landing, Lagos, Abuja) using React and Tailwind CSS. Implemented backend form handling and integrations with Node.js and MongoDB, while optimizing SEO and performance across the platform.",
+  },
+  {
+    title: "e-Likita Hospital Consultation Assistant",
+    image: "/images/e-likita.png",
+    description:
+      "e-Likita is a web-based hospital consultation assistant that guides patients through a multi-step triage process. Built with React, TypeScript, and Vite, it assesses symptoms, provides risk evaluation, and offers personalized healthcare recommendations.",
+    technologies: ["React", "TailwindCss", "Node.js", "MongoDB", "Express", ""],
+    github: "https://github.com/Elmoustafi-22/e-likita-frontend",
+    live: "https://e-likita-frontend-mauve.vercel.app/",
+    role: "Fullstack Developer",
+    contribution:
+      "Developed the frontend pages and provided RESTful APIs for user authentication, patient records, and medical consultations with An AI agent.",
   },
   {
     title: "Remote Job Finder",
@@ -48,17 +60,5 @@ export const projects: Project[] = [
     role: "Frontend Developer",
     contribution:
       "Designed and built a responsive landing page with plant-themed visuals, styled using Tailwind CSS, and optimized for mobile and desktop views.",
-  },
-  {
-    title: "BTWAWI",
-    image: "/images/btwawi.png",
-    description:
-      "BTWAWI is a multi-page event-driven web application built with React, Tailwind CSS, Node.js, and MongoDB. It includes event booking, business nominations, donations, sponsorships, and dedicated Lagos and Abuja pages for regional events.",
-    technologies: ["React", "TailwindCss", "Node.js", "MongoDB"],
-    github: "https://github.com/Smartrove/btwawi-3.0", 
-    live: "https://www.btwawi.com/",
-    role: "Fullstack Developer (Team Project)",
-    contribution:
-      "Developed multiple frontend pages (booking, secure-a-booth, grant, business nomination, donation, sponsorship, contact, landing, Lagos, Abuja) using React and Tailwind CSS. Implemented backend form handling and integrations with Node.js and MongoDB, while optimizing SEO and performance across the platform.",
   },
 ];

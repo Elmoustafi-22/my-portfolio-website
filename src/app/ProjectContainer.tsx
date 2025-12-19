@@ -1,9 +1,10 @@
-'use client'
-import React, { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
-import { poppins, hankenGrotesk } from '@/styles/fonts';
+"use client";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { poppins, hankenGrotesk } from "@/styles/fonts";
 import { Project } from "@/types";
-import Link from 'next/link';
+import Link from "next/link";
+import Image from "next/image";
 
 export default function ProjectContainer({ project }: { project: Project }) {
   const ref = useRef(null);
@@ -22,19 +23,21 @@ export default function ProjectContainer({ project }: { project: Project }) {
           {project.title}
         </h3>
         <div className="flex flex-col gap-6 mt-4 p-2">
-          
-            <p
-              className={`${hankenGrotesk.className} text-left text-base text-gray-600 dark:text-darkTextLight`}
-            >
-              {project.description}
-            </p>
-
-            <img
+          <p
+            className={`${hankenGrotesk.className} text-left text-base text-gray-600 dark:text-darkTextLight`}
+          >
+            {project.description}
+          </p>
+          <a href={project.live} title={`Visit ${project.title} live`} target="__blank">
+            <Image
               src={project.image}
               alt="website screenshot"
+              width={800} // Adjust width as needed
+              height={600} // Adjust height as needed
               className="mt-2 max-h-[280px] object-cover w-full transition-transform duration-300 ease-in-out group-hover:scale-105"
             />
-          
+          </a>
+
           <div className="flex flex-col gap-3">
             <p
               className={`${hankenGrotesk.className} text-base text-gray-600 dark:text-darkTextLight`}

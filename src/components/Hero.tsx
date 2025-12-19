@@ -6,7 +6,6 @@ import { hankenGrotesk, poppins } from "@/styles/fonts";
 export default function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.1 });
-  
 
   return (
     <motion.section
@@ -41,7 +40,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.4 }}
         >
           Full-Stack Web Developer skilled in React, Next.js, TypeScript,
-          Node.js, and MongoDB. I build responsive, user-focused applications
+          Node.js, Express, REST API, and MongoDB. I build responsive, user-focused applications
           with seamless frontend–backend integration, optimized performance, and
           modern UI/UX design.
         </motion.p>
@@ -55,7 +54,7 @@ export default function Hero() {
         >
           <a
             className={`relative bg-white px-8 py-5 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg ${hankenGrotesk.className}`}
-            href="https://drive.google.com/file/d/1_m2YQpUpusE_Bcoz-zHWfE28WuU3N7Ku/view?usp=sharing"
+            href="https://drive.google.com/file/d/1olkJy7bMOwzgAxhcxpJ1JXEnTqMotJi7/view?usp=sharing"
             target="_blank"
             rel="noopener"
           >
@@ -66,7 +65,10 @@ export default function Hero() {
           </a>
           {[
             { href: "https://github.com/Elmoustafi-22", icon: "github" },
-            { href: "https://linkedin.com/in/elmoustafi", icon: "linkedin" },
+            {
+              href: "www.linkedin.com/in/mustopha-abdulqadir",
+              icon: "linkedin",
+            },
           ].map(({ href, icon }) => (
             <a
               key={icon}
