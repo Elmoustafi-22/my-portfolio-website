@@ -11,7 +11,7 @@ export default function Contact() {
     <motion.section 
       ref={ref}
       id='contact'
-      className='container mt-40'
+      className='container px-8 mt-40'
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 }: {opacity: 0, y: 50}}
       transition={{ duration: 0.8, ease: 'easeOut' }}

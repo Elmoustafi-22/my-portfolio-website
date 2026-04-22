@@ -7,6 +7,10 @@ const config = {
   ],
   darkMode: "class",
   theme: {
+    container: {
+      center: true,
+      padding: "1rem",
+    },
     extend: {
       colors: {
         background: "var(--background)",
@@ -16,10 +20,6 @@ const config = {
         darkTextLight: "#bdbddd",
         darkText: "#cdcdff",
         darkTextDeep: "#90a0d9",
-      },
-      container: {
-        center: true,
-        padding: "1rem",
       },
     },
   },

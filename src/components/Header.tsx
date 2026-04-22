@@ -5,20 +5,20 @@ import { motion } from 'framer-motion';
 import { hankenGrotesk } from '@/styles/fonts';
 
 export default function Header() {
-    const {darkMode, setDarkMode} = useContext(DarkModeContext);
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
-    const toggleDarkMode = useCallback(() => {
-        setDarkMode(prevMode => !prevMode);
-    }, [setDarkMode])
+  const toggleDarkMode = useCallback(() => {
+    setDarkMode(prevMode => !prevMode);
+  }, [setDarkMode])
 
   return (
     <motion.header
-      className={`sticky top-0 z-30 dark:bg-darkBgDeep bg-slate-100 container mx-auto px-8 py-4 shadow-gray-300 shadow-sm dark:shadow-gray-600 ${hankenGrotesk.className}`}
+      className={`sticky top-0 z-30 dark:bg-darkBgDeep bg-slate-100 shadow-gray-300 shadow-sm dark:shadow-gray-600 ${hankenGrotesk.className} w-full`}
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="flex justify-between gap-2 md:gap-3 items-center">
+      <div className="container mx-auto px-8 py-4 flex justify-between gap-2 md:gap-3 items-center">
         <motion.p
           className="dark:text-darkTextDeep dark:after:bg-darkBgDeep text-2xl lg:text-3xl font-semibold text-sky-600 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-1 after:bg-sky-600 hover:after:w-full pb-1 after:transition-all after:duration-300 cursor-pointer "
           whileHover={{ scale: 1.1 }}

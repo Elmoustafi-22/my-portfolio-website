@@ -2,6 +2,18 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    title: "DoLessons",
+    image: "/images/dolessons.png",
+    description:
+      "DoLessons is a global online tutoring platform connecting students with expert tutors. I built and scaled responsive public pages and authenticated dashboards using Next.js, TypeScript, and Tailwind CSS.",
+    technologies: ["React", "Nextjs", "Tailwind CSS", "Git"],
+    github: "", // Assuming private or not provided
+    live: "https://www.dolessons.com/",
+    role: "Frontend Developer",
+    contribution:
+      "Translated Figma designs into pixel-perfect components, integrated REST APIs with proper error handling, and developed reusable UI components to improve development speed and consistency.",
+  },
+  {
     title: "peermoove",
     image: "/images/peermoove.png",
     description:
