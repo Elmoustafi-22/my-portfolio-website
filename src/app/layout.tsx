@@ -20,7 +20,7 @@ const inter = Inter({
 export const metadata = {
   // ─── Base URL (required so Next.js can resolve relative OG image paths) ───
   // Replace with your actual deployed domain once you publish the site.
-  metadataBase: new URL("https://mustopha-portfolio.vercel.app"),
+  metadataBase: new URL("https://mustopha.vercel.app"),
 
   // ─── Core tags ────────────────────────────────────────────────────────────
   title: "Mustopha Abdulqadir | Full-Stack Software Engineer",
@@ -30,14 +30,14 @@ export const metadata = {
   // ─── Open Graph (Facebook, LinkedIn, WhatsApp, Slack, iMessage…) ──────────
   openGraph: {
     type: "website",
-    url: "https://mustopha-portfolio.vercel.app",
+    url: "https://mustopha.vercel.app",
     siteName: "Mustopha's Portfolio",
     title: "Mustopha Abdulqadir | Full-Stack Software Engineer",
     description:
       "Explore the portfolio of Mustopha Abdulqadir, a passionate software engineer specializing in modern, responsive web applications using React, Next.js, TypeScript, and Tailwind CSS.",
     images: [
       {
-        url: "/images/Mustopha.png",   // resolved against metadataBase
+        url: "/og-banner.png",
         width: 1200,
         height: 630,
         alt: "Mustopha Abdulqadir – Full-Stack Software Engineer",
@@ -52,7 +52,7 @@ export const metadata = {
     title: "Mustopha Abdulqadir | Full-Stack Software Engineer",
     description:
       "Explore the portfolio of Mustopha Abdulqadir, a passionate software engineer specializing in modern, responsive web applications using React, Next.js, TypeScript, and Tailwind CSS.",
-    images: ["/images/Mustopha.png"],
+    images: ["/og-banner.png"],
     // creator: "@your_twitter_handle",  // optional: add your Twitter handle
   },
 };
