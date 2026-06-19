@@ -1,11 +1,11 @@
-import { Poppins, Hanken_Grotesk } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
 
 export const poppins = Poppins({
     weight: ["300", "400", "500", "600", "700", "800", "900"],
     subsets: ["latin"]
 });
 
-export const hankenGrotesk = Hanken_Grotesk({
+export const hankenGrotesk = Inter({
     weight: ["300", "400", "500", "600", "700", "800", "900"],
     subsets: ['latin']
 })

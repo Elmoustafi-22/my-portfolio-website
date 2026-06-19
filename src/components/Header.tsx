@@ -1,86 +1,111 @@
 'use client'
-import React, { useCallback, useContext } from 'react'
+import React, { useCallback, useContext, useState } from 'react'
 import { DarkModeContext } from '@/context/DarkModeContext'
-import { motion } from 'framer-motion';
-import { hankenGrotesk } from '@/styles/fonts';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
 export default function Header() {
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleDarkMode = useCallback(() => {
     setDarkMode(prevMode => !prevMode);
-  }, [setDarkMode])
+  }, [setDarkMode]);
+
+  const navItems = ["projects", "experience", "skills", "education", "contact"];
 
   return (
     <motion.header
-      className={`sticky top-0 z-30 dark:bg-darkBgDeep bg-slate-100 shadow-gray-300 shadow-sm dark:shadow-gray-600 ${hankenGrotesk.className} w-full`}
+      className="sticky top-0 z-50 w-full glass-nav shadow-sm"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-8 py-4 flex justify-between gap-2 md:gap-3 items-center">
-        <motion.p
-          className="dark:text-darkTextDeep dark:after:bg-darkBgDeep text-2xl lg:text-3xl font-semibold text-sky-600 relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-1 after:bg-sky-600 hover:after:w-full pb-1 after:transition-all after:duration-300 cursor-pointer "
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.3 }}
+      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <motion.a
+          href="#"
+          className="text-xl md:text-2xl font-bold tracking-tight font-poppins text-slate-800 dark:text-white"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
-          <span className="text-3xl md:text-4xl">M</span>ustopha
-        </motion.p>
+          Mustopha<span className="text-sky-600 font-extrabold">.A</span>
+        </motion.a>
 
-        <nav className="flex items-center gap-2 lg:gap-6">
-          <motion.ul className="flex gap-2 md:gap-6 text-gray-600 dark:text-darkTextDeep text-sm md:text-[18px]">
-            {["projects", "skills", "contact"].map((item) => (
-              <motion.li
-                key={item}
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.3 }}
-              >
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-8">
+          <ul className="flex gap-8 text-slate-600 dark:text-slate-300 font-medium font-hanken text-sm uppercase tracking-wider">
+            {navItems.map((item) => (
+              <motion.li key={item} whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
                 <a
                   href={`#${item}`}
-                  className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[1.5px] after:bg-sky-600 dark:after:bg-darkTextDeep after:transition-all after:duration-300 hover:text-sky-600 hover:after:w-full pb-2 transition-all dark:hover:text-darkTextDeep"
+                  className="relative pb-1 hover:text-sky-600 dark:hover:text-sky-400 after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-sky-600 after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {item}
                 </a>
               </motion.li>
             ))}
-          </motion.ul>
+          </ul>
+
+          <div className="w-[1px] h-5 bg-slate-200 dark:bg-slate-800"></div>
+
+          {/* Theme Toggle Button */}
           <motion.button
             onClick={toggleDarkMode}
-            className="p-2 rounded-md cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition"
-            whileTap={{ rotate: 360, scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-850 text-slate-800 dark:text-slate-250 transition-colors"
+            whileTap={{ scale: 0.9 }}
             aria-label={darkMode ? "Activate light mode" : "Activate dark mode"}
           >
-            {darkMode ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-                className="dark:text-darkText hover:text-darkBg w-3 md:w-5"
-              >
-                <path
-                  fill="currentColor"
-                  d="m6.76 4.84l-1.8-1.79l-1.41 1.41l1.79 1.79zM4 10.5H1v2h3zm9-9.95h-2V3.5h2zm7.45 3.91l-1.41-1.41l-1.79 1.79l1.41 1.41zm-3.21 13.7l1.79 1.8l1.41-1.41l-1.8-1.79zM20 10.5v2h3v-2zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6s6-2.69 6-6s-2.69-6-6-6m-1 16.95h2V19.5h-2zm-7.45-3.91l1.41 1.41l1.79-1.8l-1.41-1.41z"
-                ></path>
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                viewBox="0 0 24 24"
-                className="w-3 md:w-5"
-              >
-                <path
-                  fill="currentColor"
-                  d="M9.5 2c-1.82 0-3.53.5-5 1.35c2.99 1.73 5 4.95 5 8.65s-2.01 6.92-5 8.65c1.47.85 3.18 1.35 5 1.35c5.52 0 10-4.48 10-10S15.02 2 9.5 2"
-                ></path>
-              </svg>
-            )}
+            {darkMode ? <Sun size={18} className="text-yellow-400" /> : <Moon size={18} className="text-sky-600" />}
           </motion.button>
         </nav>
+
+        {/* Mobile Navbar Buttons */}
+        <div className="flex md:hidden items-center gap-3">
+          <motion.button
+            onClick={toggleDarkMode}
+            className="p-2 rounded-lg bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200"
+            whileTap={{ scale: 0.9 }}
+          >
+            {darkMode ? <Sun size={18} className="text-yellow-400" /> : <Moon size={18} />}
+          </motion.button>
+
+          <button
+            onClick={() => setMobileMenuOpen(prev => !prev)}
+            className="p-2 rounded-lg text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900"
+            aria-label="Toggle navigation menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Drawer menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden border-t border-slate-200/50 dark:border-slate-800/50 bg-white/95 dark:bg-slate-950/95 backdrop-blur-lg overflow-hidden"
+          >
+            <ul className="flex flex-col gap-4 p-6 font-hanken text-sm font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-355">
+              {navItems.map((item) => (
+                <li key={item}>
+                  <a
+                    href={`#${item}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-2 hover:text-sky-600 dark:hover:text-sky-400 transition"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }

@@ -1,42 +1,58 @@
 "use client";
 import ProjectContainer from "@/app/ProjectContainer";
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
-import { poppins, } from "@/styles/fonts";
 
 export default function Projects() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.1 });
-
   return (
-    <motion.section
-      id="projects"
-      ref={ref}
-      className={`container px-8 mt-0 ${poppins.className}`}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+    <section 
+      id="projects" 
+      className="relative w-full py-24 bg-slate-50 dark:bg-darkBgDeep border-t border-slate-200/40 dark:border-slate-800/40"
     >
-      <motion.h2
-        className="text-gray-700 dark:text-darkTextDeep text-center text-3xl md:text-5xl  font-bold uppercase"
-        initial={{ opacity: 0, y: -20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-      >
-        Projects
-      </motion.h2>
+      {/* Background radial glows for visual balance */}
+      <div className="absolute top-1/4 right-0 w-80 h-80 rounded-full bg-sky-500/5 blur-[100px] pointer-events-none"></div>
 
-      <motion.div
-        className="flex flex-wrap justify-center gap-6"
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
-      >
-        {projects.map((project, index) => (
-          <ProjectContainer key={index} project={project} />
-        ))}
-      </motion.div>
-    </motion.section>
+      <div className="container mx-auto px-6">
+        <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
+          <motion.h2 
+            className="text-xs uppercase tracking-widest font-extrabold text-sky-600 font-poppins"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+          >
+            My Work
+          </motion.h2>
+          
+          <motion.h3 
+            className="text-3xl md:text-4xl font-extrabold tracking-tight font-poppins text-slate-850 dark:text-white"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+          >
+            Featured Projects
+          </motion.h3>
+          
+          <motion.p 
+            className="font-hanken text-slate-500 dark:text-slate-400 max-w-xl mx-auto text-base leading-relaxed"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+          >
+            A curated selection of core applications I have designed, architected, and built. Click a project card to view live platforms or source files.
+          </motion.p>
+        </div>
+
+        {/* Project Card Grid */}
+        <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
+          {projects.map((project, index) => (
+            <ProjectContainer key={index} project={project} />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

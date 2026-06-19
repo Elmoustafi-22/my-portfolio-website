@@ -1,36 +1,37 @@
-'use client';
-import React, {useRef} from 'react'
-import { motion, useInView } from 'framer-motion';
-import { hankenGrotesk } from '@/styles/fonts';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { ChevronUp } from "lucide-react";
 
 export default function Footer() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.02 });
-  
-
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
-    <motion.footer 
-      ref={ref}
-      className='relative container p-10 mt-10 flex items-center justify-center'
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? {opacity: 1, y: 0} :  {opacity: 0, y: 30}}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
-    >
-      <p className={`${hankenGrotesk.className}text-sm font-bold text-sky-700 text-center dark:text-darkTextDeep`}>created by mustopha</p>
-      <motion.button 
-        className='absolute right-6'
-        onClick={scrollToTop}
-        whileHover={{ scale: 1.2 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" className='size-6 dark:text-darkTextDeep'>
-            <path fill="currentColor" d="m4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8z"></path>
-        </svg>
-      </motion.button>
-    </motion.footer>
-  )
+    <footer className="relative w-full py-8 bg-slate-50 dark:bg-darkBgDeep border-t border-slate-200/40 dark:border-slate-800/40">
+      <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        
+        {/* Copyright Text */}
+        <p className="font-hanken text-xs md:text-sm font-semibold text-slate-500 dark:text-slate-400">
+          © {new Date().getFullYear()} Mustopha Abdulqadir. All Rights Reserved.
+        </p>
+
+        {/* Brand signoff */}
+        <p className="font-hanken text-[11px] uppercase tracking-wider font-extrabold text-sky-600">
+          Built with Next.js & Framer Motion
+        </p>
+
+        {/* Back to top button */}
+        <motion.button
+          onClick={scrollToTop}
+          className="p-2.5 rounded-xl bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-800 hover:text-sky-600 dark:hover:text-sky-400 hover:scale-110 active:scale-95 transition-all shadow-sm"
+          whileTap={{ scale: 0.9 }}
+          aria-label="Scroll to top of page"
+        >
+          <ChevronUp size={16} />
+        </motion.button>
+      </div>
+    </footer>
+  );
 }

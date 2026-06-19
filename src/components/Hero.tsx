@@ -1,108 +1,103 @@
 "use client";
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { hankenGrotesk, poppins } from "@/styles/fonts";
+import React from "react";
+import { motion } from "framer-motion";
+import { Github, Linkedin, FileText } from "lucide-react";
 
 export default function Hero() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.1 });
-
   return (
-    <motion.section
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="container px-8 pt-12 mt-12 md:mt-24 h-[90vh] mb-0"
-    >
-      <div className="flex flex-col gap-8 text-center">
-        <motion.h1
-          className={`text-center text-6xl md:text-7xl font-bold text-gray-700 dark:text-darkText ${poppins.className}`}
-          initial={{ opacity: 0, x: -20 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+    <section className="relative w-full min-h-[80vh] flex items-center justify-center bg-slate-50 dark:bg-darkBgDeep py-20 border-b border-slate-200/40 dark:border-slate-800/40">
+      {/* Very subtle background ambient glows */}
+      <div className="absolute top-20 left-1/4 w-72 h-72 rounded-full bg-slate-200/40 dark:bg-sky-950/10 blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-20 right-1/4 w-80 h-80 rounded-full bg-slate-200/40 dark:bg-sky-950/10 blur-[120px] pointer-events-none"></div>
+
+      <div className="container mx-auto px-6 text-center max-w-4xl space-y-8 relative z-10">
+        
+        {/* Animated Pill Badge */}
+        <motion.div 
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800/40 text-slate-650 dark:text-slate-300 text-xs font-semibold uppercase tracking-wider shadow-sm"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Hi, I am{" "}
-          <span className="text-sky-600 dark:text-darkTextDeep">Mustopha.</span>
-        </motion.h1>
-        <motion.h2
-          className="text-center text-3xl md:text-4xl font-bold text-gray-600 dark:text-darkText"
-          initial={{ opacity: 0, x: -10 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          A Software Engineer.
-        </motion.h2>
+          <span className="flex h-2 w-2 relative">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+          </span>
+          Full Stack Software Developer
+        </motion.div>
+
+        {/* Name and Role Headline */}
+        <div className="space-y-4">
+          <motion.h1
+            className="text-5xl md:text-7xl font-extrabold tracking-tight font-poppins text-slate-850 dark:text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            Hi, I am <span className="text-sky-600 dark:text-sky-455">Mustopha.</span>
+          </motion.h1>
+          
+          <motion.h2
+            className="text-2xl md:text-4xl font-bold font-poppins text-slate-600 dark:text-slate-350"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            A Software Engineer.
+          </motion.h2>
+        </div>
+
+        {/* Profile Bio Description */}
         <motion.p
-          className={`max-w-2xl mx-auto text-[24pz] text-gray-600 dark:text-darkTextLight ${hankenGrotesk.className}`}
-          initial={{ opacity: 0, x: 10 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 10 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
+          className="max-w-2xl mx-auto font-hanken text-lg text-slate-650 dark:text-slate-400 leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
         >
-          Full-Stack Web Developer skilled in React, Next.js, TypeScript,
-          Node.js, Express, REST API, and MongoDB. I build responsive, user-focused applications
-          with seamless frontend–backend integration, optimized performance, and
-          modern UI/UX design.
+          Results-driven Full-Stack Software Developer with extensive experience building, maintaining, and optimizing scalable web applications and high-performance backend infrastructure. Expert in backend architecture using Node.js, Express.js, and MongoDB alongside modern frontend frameworks like Next.js, React.js, and TypeScript.
         </motion.p>
+
+        {/* Buttons / Resume / Socials */}
         <motion.div
-          className=" flex items-center justify-center gap-6"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={
-            isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
-          }
-          transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
           <a
-            className={`relative bg-white px-8 py-5 border-[1.5px] cursor-pointer border-sky-600 dark:border-darkTextDeep overflow-hidden group dark:bg-darkBg ${hankenGrotesk.className}`}
-            href="https://docs.google.com/document/d/1-pNu0NPrHJW23sVJ4yoSYovDPi8iZ3tG/edit?usp=sharing&ouid=101191662488808516242&rtpof=true&sd=true"
+            href="https://docs.google.com/document/d/1Sk5Svx6Kx151eMXLkBwN7aF9IVp30JxG/edit?usp=sharing&ouid=101191662488808516242&rtpof=true&sd=true"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-semibold shadow-md hover:shadow-sky-500/10 active:scale-95 transition-all text-base"
           >
-            <span className="relative text-[18px] font-semibold text-sky-600 dark:text-darkText z-10 group-hover:text-white dark:group-hover:text-darkBgDeep transition-colors duration-300">
-              resume
-            </span>
-            <div className="absolute inset-0 w-full bg-sky-600 dark:bg-darkTextDeep -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in"></div>
+            <FileText size={18} />
+            <span>Resume</span>
           </a>
-          {[
-            { href: "https://github.com/Elmoustafi-22", icon: "github" },
-            {
-              href: "www.linkedin.com/in/mustopha-abdulqadir",
-              icon: "linkedin",
-            },
-          ].map(({ href, icon }) => (
+
+          {/* Social Links */}
+          <div className="flex gap-4 items-center">
             <a
-              key={icon}
-              href={href}
+              href="https://github.com/Elmoustafi-22"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-sky-600 dark:after:bg-darkTextDeep hover:after:w-full pb-2 transition-all after:duration-300 group"
-              aria-label={icon}
+              className="p-3.5 rounded-2xl bg-white hover:bg-slate-105 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-350 hover:text-sky-600 dark:hover:text-sky-400 hover:scale-105 active:scale-95 transition-all shadow-sm"
+              aria-label="GitHub Profile"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="1em"
-                height="1em"
-                viewBox="0 0 16 16"
-                className="text-gray-600 dark:text-darkText size-8 hover:text-sky-600 dark:group-hover:text-darkTextDeep duration-300 transition"
-              >
-                {icon === "github" ? (
-                  <path
-                    fill="currentColor"
-                    d="M7.976 0A7.977 7.977 0 0 0 0 7.976c0 3.522 2.3 6.507 5.431 7.584c.392.049.538-.196.538-.392v-1.37c-2.201.49-2.69-1.076-2.69-1.076c-.343-.93-.881-1.175-.881-1.175c-.734-.489.048-.489.048-.489c.783.049 1.224.832 1.224.832c.734 1.223 1.859.88 2.3.685c.048-.538.293-.88.489-1.076c-1.762-.196-3.621-.881-3.621-3.964c0-.88.293-1.566.832-2.153c-.05-.147-.343-.978.098-2.055c0 0 .685-.196 2.201.832c.636-.196 1.322-.245 2.007-.245s1.37.098 2.006.245c1.517-1.027 2.202-.832 2.202-.832c.44 1.077.146 1.908.097 2.104a3.16 3.16 0 0 1 .832 2.153c0 3.083-1.86 3.719-3.62 3.915c.293.244.538.733.538 1.467v2.202c0 .196.146.44.538.392A7.98 7.98 0 0 0 16 7.976C15.951 3.572 12.38 0 7.976 0"
-                  />
-                ) : (
-                  <path
-                    fill="currentColor"
-                    fillRule="evenodd"
-                    d="M3 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm1.102 4.297a1.195 1.195 0 1 0 0-2.39a1.195 1.195 0 0 0 0 2.39m1 7.516V6.234h-2v6.579zM6.43 6.234h2v.881c.295-.462.943-1.084 2.148-1.084c1.438 0 2.219.953 2.219 2.766c0 .087.008.484.008.484v3.531h-2v-3.53c0-.485-.102-1.438-1.18-1.438c-1.079 0-1.17 1.198-1.195 1.982v2.986h-2z"
-                    clipRule="evenodd"
-                  ></path>
-                )}
-              </svg>
+              <Github size={20} />
             </a>
-          ))}
+            <a
+              href="https://www.linkedin.com/in/mustopha-abdulqadir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3.5 rounded-2xl bg-white hover:bg-slate-105 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-350 hover:text-sky-600 dark:hover:text-sky-400 hover:scale-105 active:scale-95 transition-all shadow-sm"
+              aria-label="LinkedIn Profile"
+            >
+              <Linkedin size={20} />
+            </a>
+          </div>
         </motion.div>
+
       </div>
-    </motion.section>
+    </section>
   );
 }
