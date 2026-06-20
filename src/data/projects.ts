@@ -2,18 +2,6 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    title: "NextIF Accelerator Platform",
-    image: "/images/Accelerator.jpg",
-    description:
-      "A comprehensive dual-frontend full-stack platform built entirely from scratch, serving 72+ mentees with task management, progress tracking, event attendance, and submission workflows.",
-    technologies: ["React", "Vite", "TypeScript", "Node.js", "Express", "MongoDB", "Cloudinary", "Tailwind CSS"],
-    github: "", // Private repository
-    live: "",
-    role: "Tech Lead & Full-Stack Developer (Volunteer)",
-    contribution:
-      "Personally designed and built the entire platform from scratch. Architected a personalised Mentee Portal with XP progress tracking, task feedback, and event management. Built a robust Admin Portal with mentor management, bulk CSV onboarding, and attendance tracking. Engineered the RESTful backend API with dynamic task management, automated email alerts, and Cloudinary media uploads.",
-  },
-  {
     title: "NextIF Website",
     image: "/images/nextif.org.png",
     description:
@@ -37,7 +25,18 @@ export const projects: Project[] = [
     contribution:
       "Built and scaled responsive landing pages and dashboard features. Translated complex Figma mockups into modular, pixel-perfect React components. Integrated REST APIs with advanced loading states and optimized performance using React Context.",
   },
-
+  {
+    title: "Infaq.ng",
+    image: "/images/infaq.png",
+    description:
+      "An ethical crowdfunding and fundraising platform enabling communities to start campaigns, browse causes, and donate — helping everyone grow together through ethical giving. ₦2M+ raised.",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "REST APIs", "React Router"],
+    github: "", // Private repository
+    live: "https://infaq.ng",
+    role: "Frontend Developer",
+    contribution:
+      "Personally designed and built the entire frontend from scratch. Architected responsive, mobile-first campaign pages, authentication flows, and donation workflows. Translated designs into modular, reusable React components with TypeScript, and integrated REST APIs for campaign management and payment processing.",
+  },
   {
     title: "BTWAWI",
     image: "/images/btwawi.png",
@@ -51,16 +50,16 @@ export const projects: Project[] = [
       "Collaborated as part of a team to develop responsive frontend layouts using React and Tailwind CSS. Facilitated data flow by integrating frontend workflows with the team's Node.js and Express backend services to manage form submissions and donation processing, while contributing to SEO optimisation.",
   },
   {
-    title: "Infaq.ng",
-    image: "/images/infaq.png",
+    title: "NextIF Accelerator Platform",
+    image: "/images/Accelerator.jpg",
     description:
-      "An ethical crowdfunding and fundraising platform enabling communities to start campaigns, browse causes, and donate — helping everyone grow together through ethical giving. ₦2M+ raised.",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "REST APIs", "React Router"],
+      "A comprehensive dual-frontend full-stack platform built entirely from scratch, serving 72+ mentees with task management, progress tracking, event attendance, and submission workflows.",
+    technologies: ["React", "Vite", "TypeScript", "Node.js", "Express", "MongoDB", "Cloudinary", "Tailwind CSS"],
     github: "", // Private repository
-    live: "https://infaq.ng",
-    role: "Frontend Developer",
+    live: "",
+    role: "Tech Lead & Full-Stack Developer (Volunteer)",
     contribution:
-      "Personally designed and built the entire frontend from scratch. Architected responsive, mobile-first campaign pages, authentication flows, and donation workflows. Translated designs into modular, reusable React components with TypeScript, and integrated REST APIs for campaign management and payment processing.",
+      "Personally designed and built the entire platform from scratch. Architected a personalised Mentee Portal with XP progress tracking, task feedback, and event management. Built a robust Admin Portal with mentor management, bulk CSV onboarding, and attendance tracking. Engineered the RESTful backend API with dynamic task management, automated email alerts, and Cloudinary media uploads.",
   },
   {
     title: "e-Likita",
