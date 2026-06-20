@@ -46,12 +46,12 @@ export const metadata = {
     title: "Mustopha Abdulqadir | Full-Stack Software Engineer",
     description:
       "Full-Stack Software Engineer skilled in React, Next.js, TypeScript & Node.js. I design and build fast, responsive web apps from scratch.",
-    // creator: "@your_twitter_handle",
+    creator: "@dev_mustopha",
   },
 
   // ─── Search Console Verification ──────────────────────────────────────────
   verification: {
-    google: "ov5tmrsCgDJogXPPUbPqZ0OsNPCDFpsF1x5zgDJ4NEw",
+    google: "x2FiMt385Ejgbo65ukkII3AxLL6_eP8uc1Xtgg_l_Cw",
   },
 };
 
