@@ -11,7 +11,7 @@ export const projects: Project[] = [
     live: "https://nextif.org",
     role: "Tech Lead (Volunteer)",
     contribution:
-      "Personally designed and built the entire frontend from scratch. Architected a reusable, strongly-typed component library with TypeScript that reduced new feature development time by 35%. Integrated third-party SDKs and REST APIs with secure authentication, input validation, and comprehensive error handling. Conducted code reviews and enforced best practices across the frontend codebase.",
+      "Owned end-to-end development of the frontend. Architected a reusable, strongly-typed component library with TypeScript that reduced new feature development time by 35%. Integrated third-party SDKs and REST APIs with secure authentication, input validation, and comprehensive error handling. Conducted code reviews and enforced best practices across the frontend codebase.",
   },
   {
     title: "DoLessons",
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     live: "https://infaq.ng",
     role: "Frontend Developer",
     contribution:
-      "Personally designed and built the entire frontend from scratch. Architected responsive, mobile-first campaign pages, authentication flows, and donation workflows. Translated designs into modular, reusable React components with TypeScript, and integrated REST APIs for campaign management and payment processing.",
+      "Owned end-to-end development of the frontend. Architected responsive, mobile-first campaign pages, authentication flows, and donation workflows. Translated designs into modular, reusable React components with TypeScript, and integrated REST APIs for campaign management and payment processing.",
   },
   {
     title: "BTWAWI",
