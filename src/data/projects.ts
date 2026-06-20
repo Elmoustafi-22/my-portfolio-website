@@ -47,7 +47,7 @@ export const projects: Project[] = [
     live: "https://www.btwawi.com/",
     role: "Full-stack Web Developer (Volunteer)",
     contribution:
-      "Collaborated as part of a team to develop responsive frontend layouts using React and Tailwind CSS. Facilitated data flow by integrating frontend workflows with the team's Node.js and Express backend services to manage form submissions and donation processing, while contributing to SEO optimisation.",
+      "Collaborated as part of a team to develop responsive frontend layouts using React and Tailwind CSS. Facilitated data flow by integrating frontend workflows with the team's Node.js and Express backend services to manage form submissions and donation processing.",
   },
   {
     title: "NextIF Accelerator Platform",
