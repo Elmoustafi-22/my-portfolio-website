@@ -1,6 +1,7 @@
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import { DarkModeProvider } from "@/context/DarkModeContext";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </DarkModeProvider>
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-YLLK5SCRV7"} />
     </html>
   );
 }
