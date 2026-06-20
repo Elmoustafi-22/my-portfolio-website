@@ -41,7 +41,7 @@ export const metadata = {
   },
 
   // ─── Twitter / X Card ─────────────────────────────────────────────────────
-  // Note: twitter:image is auto-generated from src/app/opengraph-image.tsx
+  // Note: twitter:image is auto-generated from src/app/twitter-image.tsx
   twitter: {
     card: "summary_large_image",
     title: "Mustopha Abdulqadir | Full-Stack Software Engineer",
