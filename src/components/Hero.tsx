@@ -65,7 +65,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <a
-            href="https://docs.google.com/document/d/1Sk5Svx6Kx151eMXLkBwN7aF9IVp30JxG/edit?usp=sharing&ouid=101191662488808516242&rtpof=true&sd=true"
+            href="https://docs.google.com/document/d/1aAskQSTvnO6GIsalvd1eFLsiEKswShrG/edit?usp=sharing&ouid=101191662488808516242&rtpof=true&sd=true"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-8 py-3.5 rounded-2xl bg-sky-600 hover:bg-sky-700 text-white font-semibold shadow-md hover:shadow-sky-500/10 active:scale-95 transition-all text-base"
