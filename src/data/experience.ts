@@ -9,6 +9,21 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    role: "Tech Lead",
+    company: "NextIF",
+    companyUrl: "https://nextif.org",
+    duration: "May 2025 – Present",
+    isVolunteer: true,
+    highlights: [
+      "Led frontend and full-stack development of web platforms from the ground up — architecting component systems, integrating third-party SDKs, and driving fast, high-quality delivery.",
+      "Architected responsive, mobile-first frontends with React, Vite, and Tailwind CSS — personally designed and built from scratch.",
+      "Built a reusable, strongly-typed component library with TypeScript, reducing new feature development time by 35%.",
+      "Integrated third-party SDKs and REST APIs with secure authentication, input validation, and comprehensive error handling.",
+      "Optimised frontend performance by identifying rendering bottlenecks and implementing efficient component patterns.",
+      "Conducted code reviews and enforced best practices across the frontend codebase.",
+    ],
+  },
+  {
     role: "Frontend Developer",
     company: "DoLesssons",
     companyUrl: "https://dolessons.com",
@@ -43,10 +58,10 @@ export const experiences: Experience[] = [
     duration: "June 2025 – Present",
     isVolunteer: true,
     highlights: [
-      "Developed and maintained responsive, scalable frontend interfaces using React and Tailwind CSS, focusing on accessibility and seamless user experiences across various devices.",
-      "Facilitated smooth data flow by integrating frontend workflows with Node.js and Express backend services to manage form submissions and donation processing.",
-      "Strengthened system architecture by integrating frontend and backend workflows, resulting in more reliable and maintainable applications.",
-      "Managed some of the development lifecycle from coding to deployment using Git, GitHub, and Vercel, adhering to modern web standards and best practices."
+      "Collaborated as part of a team to develop and maintain responsive, scalable frontend interfaces using React and Tailwind CSS, focusing on accessibility and seamless user experiences across devices.",
+      "Integrated frontend workflows with the team's Node.js and Express backend services to facilitate smooth data flow for form submissions and donation processing.",
+      "Contributed to strengthening system architecture by aligning frontend and backend workflows, resulting in more reliable and maintainable applications.",
+      "Participated in the development lifecycle from coding to deployment using Git, GitHub, and Vercel, adhering to modern web standards and best practices."
     ]
   }
 ];
