@@ -48,6 +48,11 @@ export const metadata = {
       "Full-Stack Software Engineer skilled in React, Next.js, TypeScript & Node.js. I design and build fast, responsive web apps from scratch.",
     // creator: "@your_twitter_handle",
   },
+
+  // ─── Search Console Verification ──────────────────────────────────────────
+  verification: {
+    google: "ov5tmrsCgDJogXPPUbPqZ0OsNPCDFpsF1x5zgDJ4NEw",
+  },
 };
 
 
