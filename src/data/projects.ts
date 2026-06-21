@@ -62,6 +62,18 @@ export const projects: Project[] = [
       "Personally designed and built the entire platform from scratch. Architected a personalised Mentee Portal with XP progress tracking, task feedback, and event management. Built a robust Admin Portal with mentor management, bulk CSV onboarding, and attendance tracking. Engineered the RESTful backend API with dynamic task management, automated email alerts, and Cloudinary media uploads.",
   },
   {
+    title: "peermoove",
+    image: "/images/peermoove.png",
+    description:
+      "peerMoove is a student-powered earning and delivery platform for campus life. Send, receive, or purchase anything on campus — fast, affordable, and powered by your peers.",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    github: "https://github.com/Moovee-Inc/moovee-website-frontend",
+    live: "https://www.peermoove.com/",
+    role: "Frontend Developer (Team Project)",
+    contribution:
+      "Implemented reusable UI components using React and Tailwind CSS, collaborated with the team on page structure",
+  },
+  {
     title: "e-Likita",
     image: "/images/e-likita.png",
     description:
@@ -72,5 +84,7 @@ export const projects: Project[] = [
     role: "Fullstack Developer",
     contribution:
       "Developed responsive React/TypeScript interfaces with Tailwind CSS and integrated Axios with strict validation. Contributed to backend API design with Node.js/Express/MongoDB, and implemented Google AI SDK (Gemini) for intelligent medical triage assistance.",
-  },
+  }
 ];
+
+
