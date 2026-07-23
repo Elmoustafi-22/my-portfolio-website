@@ -2,6 +2,19 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    title: "IFIP — Internship & Fellowship Platform",
+    image: "/images/ifip.nextif.org.png",
+    description:
+      "A full-stack monorepo internship and fellowship platform featuring atomic applicant registration, Paystack/Flutterwave payment workflows with cohort capacity locks, an LMS assessment engine with anti-cheat measures, and multi-role dashboards for applicants, partners, and admins.",
+    technologies: ["Next.js", "Node.js", "Express", "TypeScript", "MongoDB", "Paystack", "Flutterwave"],
+    github: "", // Private repository
+    live: "https://ifip.nextif.org",
+    role: "Full-Stack Developer (Volunteer)",
+    contribution:
+      "Built full-stack monorepo architecture using Next.js (App Router), Node.js, Express, TypeScript, and MongoDB. Engineered atomic applicant registration and payment workflows using Paystack and Flutterwave with 15-minute cohort capacity locks to eliminate race conditions. Built an LMS assessment engine with sequential module unlocking, anti-cheat sanitization, automated grading, and retake cooldown timers. Designed multi-role dashboards for Applicants, Partners, and Admins. Handled Paystack webhooks to convert temporary sessions into permanent authenticated accounts post-payment.",
+    scrollableImage: true,
+  },
+  {
     title: "NextIF Website",
     image: "/images/nextif.org.png",
     description:

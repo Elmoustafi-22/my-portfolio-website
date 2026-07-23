@@ -7,4 +7,5 @@ export interface Project {
     live: string;
     role: string;
     contribution: string;
-}
+    scrollableImage?: boolean;
+}

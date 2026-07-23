@@ -17,11 +17,6 @@ export default function Footer() {
           © {new Date().getFullYear()} Mustopha Abdulqadir. All Rights Reserved.
         </p>
 
-        {/* Brand signoff */}
-        <p className="font-hanken text-[11px] uppercase tracking-wider font-extrabold text-sky-600">
-          Built with Next.js & Framer Motion
-        </p>
-
         {/* Back to top button */}
         <motion.button
           onClick={scrollToTop}

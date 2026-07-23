@@ -1,11 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Project } from "@/types";
 import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
 
 export default function ProjectContainer({ project }: { project: Project }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <motion.div
       className="group w-full md:w-[95%] lg:w-[48%] bg-white/40 dark:bg-slate-900/35 border border-slate-200/50 dark:border-slate-800/40 rounded-3xl p-5 shadow-sm hover:shadow-lg dark:shadow-none hover:border-sky-500/30 dark:hover:border-sky-550/20 backdrop-blur-md transition-all duration-300 flex flex-col justify-between"
@@ -13,19 +15,40 @@ export default function ProjectContainer({ project }: { project: Project }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.5 }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="space-y-4">
         {/* Project Thumbnail Screenshot */}
         <a href={project.live || "#"} target={project.live ? "_blank" : "_self"} rel="noopener noreferrer" className="block relative">
           <div className="relative w-full h-[260px] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-950 border border-slate-200/50 dark:border-slate-800/50 shadow-inner">
             {project.image ? (
-              <Image
-                src={project.image}
-                alt={`${project.title} screenshot`}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover object-top transition-transform duration-500 ease-in-out group-hover:scale-105"
-              />
+              project.scrollableImage ? (
+                /* Scrollable image: slides up on hover to reveal the full tall screenshot */
+                <div className="w-full h-full overflow-hidden relative">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    width={800}
+                    height={2400}
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      display: "block",
+                      transform: isHovered ? "translateY(calc(-100% + 260px))" : "translateY(0)",
+                      transition: "transform 6s ease-in-out",
+                    }}
+                  />
+                </div>
+              ) : (
+                <Image
+                  src={project.image}
+                  alt={`${project.title} screenshot`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-top transition-transform duration-500 ease-in-out group-hover:scale-105"
+                />
+              )
             ) : (
               <div className="w-full h-full flex items-center justify-center bg-slate-105 dark:bg-slate-900 text-slate-400">
                 <span>No Image Available</span>

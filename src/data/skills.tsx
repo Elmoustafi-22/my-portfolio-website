@@ -11,11 +11,13 @@ export const skillCategories: SkillCategory[] = [
     items: [
       "Node.js",
       "Express.js",
+      "NestJS",
       "RESTful API Design",
       "Middleware Architecture",
       "Secure Token Management",
       "Input Validation & Sanitization",
     ],
+
   },
   {
     category: "Databases & Security",
