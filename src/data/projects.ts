@@ -11,7 +11,7 @@ export const projects: Project[] = [
     live: "https://ifip.nextif.org",
     role: "Full-Stack Developer (Volunteer)",
     contribution:
-      "Built full-stack monorepo architecture using Next.js (App Router), Node.js, Express, TypeScript, and MongoDB. Engineered atomic applicant registration and payment workflows using Paystack and Flutterwave with 15-minute cohort capacity locks to eliminate race conditions. Built an LMS assessment engine with sequential module unlocking, anti-cheat sanitization, automated grading, and retake cooldown timers. Designed multi-role dashboards for Applicants, Partners, and Admins. Handled Paystack webhooks to convert temporary sessions into permanent authenticated accounts post-payment.",
+      "Built full-stack monorepo architecture using Next.js (App Router), Node.js, Express, TypeScript, and MongoDB. Engineered atomic applicant registration and payment workflows using Paystack and Flutterwave, with time-limited capacity reservations to prevent race conditions and overbooking. Built an LMS assessment engine with sequential module unlocking, anti-cheat sanitization, automated grading, and retake cooldown timers. Designed multi-role dashboards for Applicants, Partners, and Admins. Handled Paystack webhooks to convert temporary sessions into permanent authenticated accounts post-payment.",
     scrollableImage: true,
   },
   {
